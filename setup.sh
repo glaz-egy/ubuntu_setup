@@ -19,3 +19,6 @@ sudo apt install esl-erlang -y
 
 echo "install elixir"
 sudo apt install elixir -y
+
+echo "install nginx"
+sudo apt install nginx -y
