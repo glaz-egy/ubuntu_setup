@@ -1,3 +1,7 @@
+echo "update"
+sudo apt update
+sudo apt upgrade -y
+
 echo "install aptitude"
 sudo apt install aptitude -y
 
@@ -10,15 +14,22 @@ sudo apt install inotify-tools -y
 echo "install PostgreSQL"
 sudo apt install postgresql postgresql-contrib -y
 
+echo "install node.js"
+sudo apt install npm -y
+
 echo "add erlang repository and elixir repository"
-sudo wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
+wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
 sudo apt update
+sudo apt upgrade -y
 
 echo "install erlang"
 sudo apt install esl-erlang -y
 
 echo "install elixir"
 sudo apt install elixir -y
+
+echo "install phoenix"
+mix archive.install hex phx_new 1.5.3
 
 echo "install nginx"
 sudo apt install nginx -y
