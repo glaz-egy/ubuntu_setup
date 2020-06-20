@@ -28,6 +28,9 @@ sudo apt install esl-erlang -y
 echo "install elixir"
 sudo apt install elixir -y
 
+echo "install hex"
+mix local.hex
+
 echo "install phoenix"
 mix archive.install hex phx_new 1.5.3
 
